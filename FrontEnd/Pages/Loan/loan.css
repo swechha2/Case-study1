@@ -1,0 +1,86 @@
+.body {
+  padding: 0;
+  margin: 0;
+}
+.body .loan-service-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.body .loan-service-container h1 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+.body .loan-service-container .options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.body .loan-service-container .options button {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.body .loan-service-container .options button:hover {
+  background-color: #4CAF50;
+  color: #fff;
+}
+.body .loan-service-container .form,
+.body .loan-service-container .available-loans,
+.body .loan-service-container .user-loan-options {
+  margin-top: 20px;
+  text-align: left;
+}
+.body .loan-service-container .form label,
+.body .loan-service-container .available-loans label,
+.body .loan-service-container .user-loan-options label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.body .loan-service-container .form input,
+.body .loan-service-container .available-loans input,
+.body .loan-service-container .user-loan-options input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.body .loan-service-container .form button[type=submit],
+.body .loan-service-container .available-loans button[type=submit],
+.body .loan-service-container .user-loan-options button[type=submit] {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.body .loan-service-container .form button[type=submit]:hover,
+.body .loan-service-container .available-loans button[type=submit]:hover,
+.body .loan-service-container .user-loan-options button[type=submit]:hover {
+  background-color: #45a049;
+}
+.body .loan-service-container .form ul,
+.body .loan-service-container .available-loans ul,
+.body .loan-service-container .user-loan-options ul {
+  list-style-type: none;
+  padding: 0;
+}
+.body .loan-service-container .form li,
+.body .loan-service-container .available-loans li,
+.body .loan-service-container .user-loan-options li {
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}/*# sourceMappingURL=loan.css.map */

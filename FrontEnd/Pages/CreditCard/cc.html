@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cc.css">
+</head>
+<body>
+    <div class="body">
+        <div class="credit-card-service-container">
+            <h1>Credit Card Service</h1>
+            <div class="options">
+              <button (click)="showSection('apply')">Apply for New Credit Card</button>
+              <button (click)="showSection('cardService')">Card Service</button>
+            </div>
+          
+            <!-- Apply for New Credit Card -->
+            <div *ngIf="selectedSection === 'apply'" class="apply-card-section">
+              <h2>Apply for New Credit Card</h2>
+          
+              <!-- Application Form -->
+              <form class="form">
+                <label>Card Type:</label>
+                <input type="text" [(ngModel)]="cardType" name="cardType" required>
+                <label>Annual Income:</label>
+                <input type="number" [(ngModel)]="annualIncome" name="annualIncome" required>
+                <label>Credit Limit:</label>
+                <input type="number" [(ngModel)]="creditLimit" name="creditLimit" required>
+                <label>Employment Type:</label>
+                <input type="text" [(ngModel)]="employmentType" name="employmentType" required>
+                <button type="submit">Submit Application</button>
+              </form>
+          
+              <!-- List of Available Cards -->
+              <h3>Available Cards</h3>
+              <ul>
+                <li *ngFor="let card of availableCards">
+                  {{ card.name }} - {{ card.benefits }}
+                  <button (click)="applyForCard(card)">Apply</button>
+                </li>
+              </ul>
+            </div>
+          
+            <!-- Card Services -->
+            <div *ngIf="selectedSection === 'cardService'" class="card-service-section">
+              <h2>Card Services</h2>
+              <button (click)="showCardService('approved')">Approved Cards</button>
+              <button (click)="showCardService('rejected')">Rejected Cards</button>
+              <button (click)="showCardService('existing')">Existing User Cards</button>
+              <button (click)="showCardService('cancel')">Cancel Card</button>
+          
+              <!-- Approved Cards -->
+              <div *ngIf="cardServiceSection === 'approved'">
+                <h3>Approved Cards</h3>
+                <ul>
+                  <li *ngFor="let card of approvedCards">{{ card.name }} - {{ card.creditLimit }}</li>
+                </ul>
+              </div>
+          
+              <!-- Rejected Cards -->
+              <div *ngIf="cardServiceSection === 'rejected'">
+                <h3>Rejected Cards</h3>
+                <ul>
+                  <li *ngFor="let card of rejectedCards">{{ card.name }}</li>
+                </ul>
+              </div>
+          
+              <!-- Existing User Cards -->
+              <div *ngIf="cardServiceSection === 'existing'">
+                <h3>Existing Cards</h3>
+                <ul>
+                  <li *ngFor="let card of existingUserCards">
+                    {{ card.name }} - {{ card.creditLimit }}
+                    <button (click)="getCurrentBill(card)">Get Current Bill</button>
+                  </li>
+                </ul>
+              </div>
+          
+              <!-- Cancel Card Option -->
+              <div *ngIf="cardServiceSection === 'cancel'">
+                <h3>Cancel Card</h3>
+                <ul>
+                  <li *ngFor="let card of existingUserCards">
+                    {{ card.name }} - {{ card.creditLimit }}
+                    <button (click)="cancelCard(card)">Cancel Card</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+</body>
+</html>

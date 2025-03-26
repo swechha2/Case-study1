@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bills.css">
+</head>
+<body>
+    <div class="body">
+        <div class="bills-container">
+            <h1>Bills</h1>
+            <div class="options">
+              <button (click)="showSection('add')">Add Bills</button>
+              <button (click)="showSection('saved')">Saved Bills</button>
+            </div>
+          
+            <!-- Add Bills Section -->
+            <div *ngIf="selectedSection === 'add'" class="add-bills-section">
+              <h2>Available Bills</h2>
+              <ul>
+                <li *ngFor="let bill of availableBills">
+                  {{ bill.name }} - {{ bill.dueDate }}
+                  <button (click)="addBill(bill)">Add</button>
+                </li>
+              </ul>
+          
+              <!-- Prompt for Consumer ID and Name -->
+              <div *ngIf="isAddingBill" class="add-bill-form">
+                <h3>Add Bill</h3>
+                <label>Consumer ID:</label>
+                <input type="number" [(ngModel)]="consumerId" name="consumerId" required />
+                <label>Name:</label>
+                <input type="text" [(ngModel)]="name" name="name" required />
+                <button (click)="confirmAddBill()">Confirm Add</button>
+                <button (click)="cancelAddBill()">Cancel</button>
+              </div>
+            </div>
+          
+            <!-- Saved Bills Section -->
+            <div *ngIf="selectedSection === 'saved'" class="saved-bills-section">
+              <h2>Saved Bills</h2>
+              <ul>
+                <li *ngFor="let bill of savedBills">
+                  {{ bill.name }} - Consumer ID: {{ bill.consumerId }}
+                  <button (click)="getBillAmount(bill)">Get Bill Amount</button>
+                  <button (click)="deleteBill(bill)">Delete Bill</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tranactions.css">
+</head>
+<body>
+    <div class="body">
+        <div class="transactions-container">
+            <h2>Transaction History</h2>
+          
+            <!-- Filter Section -->
+            <div class="filter-section">
+              <div class="date-filter">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" [(ngModel)]="startDate">
+          
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" [(ngModel)]="endDate">
+              </div>
+          
+              <div class="item-filter">
+                <label for="itemsCount">Number of Items:</label>
+                <select id="itemsCount" [(ngModel)]="itemsCount">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+          
+              <button (click)="filterTransactions()" class="filter-button">Apply Filters</button>
+            </div>
+          
+            <!-- Transactions List -->
+            <div class="transactions-list">
+              <div *ngFor="let transaction of filteredTransactions" class="transaction-item">
+                <p><strong>Date:</strong> {{ transaction.date | date }}</p>
+                <p><strong>Description:</strong> {{ transaction.description }}</p>
+                <p><strong>Amount:</strong> {{ transaction.amount | currency }}</p>
+                <p><strong>Type:</strong> {{ transaction.type }}</p>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+</body>
+</html>

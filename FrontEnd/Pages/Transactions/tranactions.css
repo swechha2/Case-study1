@@ -1,0 +1,80 @@
+.body {
+  padding: 0;
+  margin: 0;
+}
+.body .transactions-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.body .transactions-container h2 {
+  text-align: center;
+  color: #333;
+}
+.body .transactions-container .filter-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.body .transactions-container .filter-section .date-filter,
+.body .transactions-container .filter-section .item-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.body .transactions-container .filter-section label {
+  font-weight: bold;
+  color: #555;
+}
+.body .transactions-container .filter-section input[type=date],
+.body .transactions-container .filter-section select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.body .transactions-container .filter-section input[type=date]:focus,
+.body .transactions-container .filter-section select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.body .transactions-container .filter-section .filter-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.body .transactions-container .filter-section .filter-button:hover {
+  background-color: #0056b3;
+}
+.body .transactions-container .transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.body .transactions-container .transactions-list .transaction-item {
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.body .transactions-container .transactions-list .transaction-item p {
+  margin: 5px 0;
+  color: #333;
+}
+.body .transactions-container .transactions-list .transaction-item p strong {
+  color: #555;
+}/*# sourceMappingURL=tranactions.css.map */

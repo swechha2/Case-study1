@@ -1,0 +1,105 @@
+.body {
+  padding: 0;
+  margin: 0;
+}
+.body .credit-card-service-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.body .credit-card-service-container h1 {
+  color: #007acc;
+  margin-bottom: 20px;
+}
+.body .credit-card-service-container .options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.body .credit-card-service-container .options button {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.body .credit-card-service-container .options button:hover {
+  background-color: #007acc;
+  color: #fff;
+}
+.body .credit-card-service-container .form,
+.body .credit-card-service-container .apply-card-section,
+.body .credit-card-service-container .card-service-section {
+  margin-top: 20px;
+  text-align: left;
+}
+.body .credit-card-service-container .form label,
+.body .credit-card-service-container .apply-card-section label,
+.body .credit-card-service-container .card-service-section label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+.body .credit-card-service-container .form input,
+.body .credit-card-service-container .apply-card-section input,
+.body .credit-card-service-container .card-service-section input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+.body .credit-card-service-container .form button[type=submit],
+.body .credit-card-service-container .apply-card-section button[type=submit],
+.body .credit-card-service-container .card-service-section button[type=submit] {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.body .credit-card-service-container .form button[type=submit]:hover,
+.body .credit-card-service-container .apply-card-section button[type=submit]:hover,
+.body .credit-card-service-container .card-service-section button[type=submit]:hover {
+  background-color: #005999;
+}
+.body .credit-card-service-container .form ul,
+.body .credit-card-service-container .apply-card-section ul,
+.body .credit-card-service-container .card-service-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.body .credit-card-service-container .form li,
+.body .credit-card-service-container .apply-card-section li,
+.body .credit-card-service-container .card-service-section li {
+  padding: 8px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+.body .credit-card-service-container .form li button,
+.body .credit-card-service-container .apply-card-section li button,
+.body .credit-card-service-container .card-service-section li button {
+  padding: 5px 10px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.body .credit-card-service-container .form li button:hover,
+.body .credit-card-service-container .apply-card-section li button:hover,
+.body .credit-card-service-container .card-service-section li button:hover {
+  background-color: #005999;
+}/*# sourceMappingURL=cc.css.map */

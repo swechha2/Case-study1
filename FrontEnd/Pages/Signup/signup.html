@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="body">
+        <div class="head">
+            <header class="header">
+              <div class="logo">QBank</div>
+              <nav class="nav-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Products</a>
+              </nav>
+              <div class="auth-buttons">
+                <button class="login-btn" (click)="goToLogin()">Log In</button>
+                <button class="signup-btn" (click)="goToLogin()" >Sign Up</button>
+              </div>
+            </header>
+        </div>
+        <div class="content">
+            <div class="signup-container">
+                <h2>Sign Up</h2>
+                <form (ngSubmit)="onSubmit()">
+                  
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" [(ngModel)]="user.name" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" [(ngModel)]="user.age" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="sex">Sex</label>
+                    <select id="sex" name="sex" [(ngModel)]="user.sex" required>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" [(ngModel)]="user.address" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" [(ngModel)]="user.phone" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="branchName">Branch Name</label>
+                    <input type="text" id="branchName" name="branchName" [(ngModel)]="user.branchName" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="deposit">Deposit</label>
+                    <input type="number" id="deposit" name="deposit" [(ngModel)]="user.deposit" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+                  </div>
+              
+                  <button type="submit" class="submit-button">Sign Up</button>
+                </form>
+              </div>
+              
+        </div>
+    </div>
+</body>
+</html>

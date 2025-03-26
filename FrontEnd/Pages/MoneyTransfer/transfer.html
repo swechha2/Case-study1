@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="transfer.css">
+</head>
+<body>
+    <div class="body">
+        <div class="moneytransfer-container">
+            <h1>Money Transfer</h1>
+            <div class="options">
+              <button (click)="showForm('withoutNominee')">Transfer without Nominee</button>
+              <button (click)="showForm('withNominee')">Transfer with Nominee</button>
+              <button (click)="showForm('addNominee')">Add Nominee</button>
+              <button (click)="showForm('saved-nominees')">Saved Nominee</button>
+            </div>
+          
+            <form *ngIf="selectedForm === 'withoutNominee'" class="form">
+              <h2>Transfer without Nominee</h2>
+              <label>Name:</label>
+              <input type="text" [(ngModel)]="name" name="name" required>
+              <label>From Account:</label>
+              <input type="number" [(ngModel)]="fromAccount" name="fromAccount" required>
+              <label>To Account:</label>
+              <input type="number" [(ngModel)]="toAccount" name="toAccount" required>
+              <label>Amount:</label>
+              <input type="number" [(ngModel)]="amount" name="amount" required>
+              <label>Remarks:</label>
+              <input type="text" [(ngModel)]="remarks" name="remarks">
+              <button type="submit">Submit</button>
+            </form>
+          
+            <form *ngIf="selectedForm === 'withNominee'" class="form">
+              <h2>Transfer with Nominee</h2>
+              <label>Nominee Name:</label>
+              <input type="text" [(ngModel)]="nomineeName" name="nomineeName" required>
+              <label>Amount:</label>
+              <input type="number" [(ngModel)]="amount" name="amount" required>
+              <label>Account Number:</label>
+              <input type="number" [(ngModel)]="accountNumber" name="accountNumber" required>
+              <label>Remark:</label>
+              <input type="text" [(ngModel)]="remark" name="remark">
+              <button type="submit">Submit</button>
+            </form>
+          
+            <form *ngIf="selectedForm === 'addNominee'" class="form">
+              <h2>Add Nominee</h2>
+              <label>Name:</label>
+              <input type="text" [(ngModel)]="name" name="name" required>
+              <label>Relation Remark:</label>
+              <input type="text" [(ngModel)]="relRemarks" name="relRemarks">
+              <label>Account Number:</label>
+              <input type="number" [(ngModel)]="accountNumber" name="accountNumber" required>
+              <label>Bank Name:</label>
+              <input type="text" [(ngModel)]="bankName" name="bankName" required>
+              <label>Bank ID:</label>
+              <input type="number" [(ngModel)]="bankId" name="bankId" required>
+              <label>Nickname:</label>
+              <input type="text" [(ngModel)]="nickName" name="nickName">
+              <button type="submit">Submit</button>
+            </form>
+            <div *ngIf="selectedForm === 'savedNominees'" class="saved-nominees">
+                <h2>Saved Nominees</h2>
+                <ul>
+                  <li *ngFor="let nominee of savedNominees">
+                    {{ nominee.name }} - {{ nominee.accountNumber }} - {{ nominee.nickName }}
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

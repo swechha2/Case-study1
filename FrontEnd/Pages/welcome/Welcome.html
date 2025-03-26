@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Welcome.css">
+</head>
+<body>
+    <div class="body">
+        <div class="head">
+        <header class="header">
+          <div class="logo">QBank</div>
+          <nav class="nav-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Products</a>
+          </nav>
+          <div class="auth-buttons">
+            <button class="login-btn" (click)="goToLogin()">Log In</button>
+            <button class="signup-btn" (click)="goToLogin()" >Sign Up</button>
+          </div>
+        </header>
+        </div>
+        <div class="content">
+          <div class="content-section">
+            <div class="text-content">
+              <h1 class="tagline">Your Bold Tagline Here</h1>
+              <p class="catchphrase">A catchy phrase to capture attention.</p>
+              <p class="description">
+                This is a paragraph explaining the purpose or benefits of your product or service.
+                You can add more information here to make it more engaging and informative.
+              </p>
+              <button class="get-started-btn" (click)="goToLogin()">Get Started</button>
+            </div>
+            <div class="image-content">
+              <img src="path/to/your/image.jpg" alt="Descriptive Alt Text">
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+</body>
+</html>

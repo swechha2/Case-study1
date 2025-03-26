@@ -1,0 +1,84 @@
+.body{
+    padding:0;
+    margin:0;
+    .moneytransfer-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      
+        h1 {
+          color: #4CAF50;
+          margin-bottom: 20px;
+        }
+      
+        .options {
+          display: flex;
+          justify-content: space-around;
+          margin-bottom: 20px;
+      
+          button {
+            padding: 10px 15px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+      
+            &:hover {
+              background-color: #4CAF50;
+              color: #fff;
+            }
+          }
+        }
+      
+        .form {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          text-align: left;
+      
+          label {
+            font-weight: bold;
+          }
+      
+          input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+          }
+      
+          button[type="submit"] {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+      
+            &:hover {
+              background-color: #45a049;
+            }
+          }
+        }
+        .saved-nominees {
+            ul {
+              list-style-type: none;
+              padding: 0;
+            }
+            
+            li {
+              padding: 8px;
+              background-color: #f9f9f9;
+              border-bottom: 1px solid #ddd;
+            }
+          }
+
+      }
+      
+}
